@@ -15,8 +15,6 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'vim-autoformat/vim-autoformat'
-
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 " Initialize plugin system
@@ -48,7 +46,8 @@ set backspace=indent,eol,start
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " Create a newline below on ctrl+enter
-nnoremap <C-m> o<esc>
+" but the ctrl aint working
+nnoremap <Enter> o<esc>
 
 " Save file
 nnoremap <C-s> :w<CR>
@@ -75,7 +74,6 @@ function! ShowDocumentation()
 	endif
 endfunction
 
-
 " Scroll floating windows
 nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
@@ -83,10 +81,6 @@ inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float
 inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-
-
-" Format on save
-au BufWrite * :Autoformat
 
 syntax on
 set t_Co=256
