@@ -83,6 +83,10 @@ bindsym $mod+Tab workspace next
 # split in horizontal orientation
 bindsym $mod+h split h
 
+# Printscreen
+bindsym Print exec flameshot full
+bindsym Ctrl+Shift+Print exec flameshot gui
+
 # split in vertical orientation
 bindsym $mod+v split v
 
