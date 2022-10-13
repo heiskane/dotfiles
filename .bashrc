@@ -120,10 +120,6 @@ if ! shopt -oq posix; then
 fi
 . "$HOME/.cargo/env"
 
-export PATH=${HOME}/tools/vim/bin:$PATH
-#export VIMRUNTIME=/opt/vim/runtime/
-
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export NVM_DIR="$HOME/.nvm"
