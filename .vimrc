@@ -15,7 +15,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'arcticicestudio/nord-vim'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
@@ -85,5 +85,4 @@ vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(
 syntax on
 set t_Co=256
 set cursorline
-colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
+colorscheme nord 
