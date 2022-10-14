@@ -8,8 +8,6 @@ call plug#begin()
 "   - Avoid using standard Vim directory names like 'plugin'
 
 " Make sure you use single quotes
-
-
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Use release branch (recommend)
@@ -25,6 +23,7 @@ call plug#end()
 "   syntax off            " Disable syntax highlighting
 
 
+" Set relative line numbers
 set number
 
 " Some servers have issues with backup files, see #649.
