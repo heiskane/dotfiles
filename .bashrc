@@ -127,7 +127,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # disable freeze keys (Ctrl+S)
-stty -ixon
+# I think this breaks things like vim
+# stty -ixon
 
 # setup dotfiles repo
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

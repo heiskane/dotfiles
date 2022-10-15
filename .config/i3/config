@@ -81,6 +81,10 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace previous
 
+# execute i3wsr 
+exec_always --no-startup-id $HOME/.cargo/bin/i3wsr
+
+# Handle screenshots
 bindsym Ctrl+Shift+Print exec flameshot gui
 
 # Open new browser
