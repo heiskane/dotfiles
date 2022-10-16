@@ -48,8 +48,9 @@ inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 " but the ctrl aint working
 nnoremap <Enter> o<esc>
 
-" Save file
-nnoremap <C-s> :w<CR>
+
+set listchars=eol:$,tab:>➜,trail:~,extends:>,precedes:<,space:∙
+set list
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.

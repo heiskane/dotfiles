@@ -1,5 +1,6 @@
 {
 	"coc.preferences.formatOnSaveFiletypes": ["python", "rust"],
+	"python.linting.mypyEnabled": true,
 	"python.formatting.provider": "black",
 	"python.formatting.blackPath": "/home/heiskane/.local/bin/black"
 }
