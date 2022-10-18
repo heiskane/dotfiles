@@ -196,7 +196,7 @@ exec --no-startup-id feh --bg-max ~/Pictures/wallpaper.jpg
 for_window [class=".*"] border pixel 6
 
 gaps inner 20
-gaps top 35
+gaps top 50
 
 # picom
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
