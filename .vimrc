@@ -8,14 +8,12 @@ call plug#begin()
 "   - Avoid using standard Vim directory names like 'plugin'
 
 " Make sure you use single quotes
-
-
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'arcticicestudio/nord-vim'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
@@ -25,6 +23,7 @@ call plug#end()
 "   syntax off            " Disable syntax highlighting
 
 
+" Set relative line numbers
 set number
 
 " Some servers have issues with backup files, see #649.
@@ -49,8 +48,8 @@ inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 " but the ctrl aint working
 nnoremap <Enter> o<esc>
 
-" Save file
-nnoremap <C-s> :w<CR>
+set listchars=eol:$,tab:>➜,trail:~,extends:>,precedes:<,space:∙
+set list
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -85,5 +84,4 @@ vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(
 syntax on
 set t_Co=256
 set cursorline
-colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
+colorscheme nord 
