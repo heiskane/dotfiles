@@ -120,10 +120,6 @@ if ! shopt -oq posix; then
 fi
 . "$HOME/.cargo/env"
 
-export PATH=${HOME}/tools/vim/bin:$PATH
-#export VIMRUNTIME=/opt/vim/runtime/
-
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export NVM_DIR="$HOME/.nvm"
@@ -131,4 +127,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # disable freeze keys (Ctrl+S)
-stty -ixon
+# I think this breaks things like vim
+# stty -ixon
+
+# setup dotfiles repo
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+alias fix-monitors='nvidia-settings --assign CurrentMetaMode="DPY-1: nvidia-auto-select +0+0 {ForceCompositionPipeline=On}, DPY-0: nvidia-auto-select +3440+0 {ForceCompositionPipeline=On}"'
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# >>>> Vagrant command completion (start)
+. /opt/vagrant/embedded/gems/2.3.4/gems/vagrant-2.3.4/contrib/bash/completion.sh
+# <<<<  Vagrant command completion (end)
