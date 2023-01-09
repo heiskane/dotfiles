@@ -8,6 +8,7 @@ Plug 'navarasu/onedark.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'ThePrimeagen/harpoon'
+Plug 'hashivim/vim-terraform'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
@@ -17,6 +18,13 @@ call plug#end()
 set nu rnu 
 
 colorscheme onedark
+
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 lua << EOF
 require('coc')
