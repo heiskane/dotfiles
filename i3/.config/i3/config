@@ -198,6 +198,9 @@ for_window [class=".*"] border pixel 4
 
 gaps inner 15
 gaps top 35
+gaps left -8
+gaps right -9
+gaps bottom -10
 
 # picom
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
