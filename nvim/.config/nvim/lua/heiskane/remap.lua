@@ -23,3 +23,7 @@ vim.opt.listchars:append "tab:<->"
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 
+vim.keymap.set("n", "<leader>op", vim.diagnostic.open_float)
+
+vim.keymap.set("n", "<C-j>", "jzz")
+vim.keymap.set("n", "<C-k>", "kzz")
