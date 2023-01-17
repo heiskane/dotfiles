@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use 'folke/tokyonight.nvim'
+  use('folke/tokyonight.nvim')
 
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -30,6 +30,8 @@ return require('packer').startup(function(use)
       require("todo-comments").setup{}
     end
   }
+
+  use('mg979/vim-visual-multi')
 
   use {
   'VonHeikemen/lsp-zero.nvim',

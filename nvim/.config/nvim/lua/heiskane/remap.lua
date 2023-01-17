@@ -18,6 +18,9 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- Scuffed when copying some special chars
+vim.keymap.set("v", "<leader>s", "y<Esc>:%s/<C-r><C-o>\"/<C-r><C-o>\"/gI<Left><Left><Left>")
+
 vim.opt.list = true
 vim.opt.listchars:append "tab:<->"
 vim.opt.listchars:append "space:⋅"
