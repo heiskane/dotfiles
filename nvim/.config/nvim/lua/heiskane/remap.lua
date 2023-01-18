@@ -16,10 +16,12 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>s",
+               [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Scuffed when copying some special chars
-vim.keymap.set("v", "<leader>s", "y<Esc>:%s/<C-r><C-o>\"/<C-r><C-o>\"/gI<Left><Left><Left>")
+vim.keymap.set("v", "<leader>s",
+               "y<Esc>:%s/<C-r><C-o>\"/<C-r><C-o>\"/gI<Left><Left><Left>")
 
 vim.opt.list = true
 vim.opt.listchars:append "tab:<->"
@@ -27,6 +29,8 @@ vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 
 vim.keymap.set("n", "<leader>op", vim.diagnostic.open_float)
+vim.keymap.set("n", 'dn', vim.diagnostic.goto_next)
+vim.keymap.set("n", 'dp', vim.diagnostic.goto_prev)
 
 vim.keymap.set("n", "<C-j>", "jzz")
 vim.keymap.set("n", "<C-k>", "kzz")
