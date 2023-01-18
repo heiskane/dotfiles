@@ -1,0 +1,54 @@
+-- if vim.g.snippets ~= "luasnip" then return end
+local ls = require("luasnip")
+local types = require("luasnip.util.types")
+
+ls.config.set_config {
+    history = true,
+    updateevents = "TextChanged,TextChangedI",
+    enable_autosnippets = true,
+    ext_opts = {
+        [types.choiceNode] = {active = {virt_text = {{"<-", "Error?"}}}}
+    }
+}
+
+local s = ls.s
+local t = ls.t
+local i = ls.i
+ls.add_snippets("all", {s("expand", t "Hello World")})
+
+ls.add_snippets("rust", {
+    ls.parser.parse_snippet("docstring", [[
+/// TODO: short sentence explaining what it is
+/// $1
+/// TODO: more detailed explanation
+/// $2
+/// # Panics
+/// TODO: Explain panics if relevant
+/// $3
+/// # Examples
+/// TODO: at least one code example that users can copy/paste to try it
+/// even more advanced explanations if necessary
+/// $4
+/// ```rust
+/// println!("Hello World!");$5
+/// ```
+    ]])
+})
+
+-- <c-k> is my expansion key
+-- this will expand the current item or jump to the next item within the snippet.
+vim.keymap.set({"i", "s"}, "<C-k>", function()
+    if ls.expand_or_jumpable() then ls.expand_or_jump() end
+end, {silent = true, remap = true})
+
+-- <c-j> is my jump backwards key.
+-- this always moves to the previous item within the snippet
+vim.keymap.set({"i", "s"}, "<c-j>",
+               function() if ls.jumpable(-1) then ls.jump(-1) end end,
+               {silent = true, remap = true})
+
+-- <c-l> is selecting within a list of options.
+-- This is useful for choice nodes (introduced in the forthcoming episode 2)
+vim.keymap.set("i", "<c-l>", function()
+    if ls.choice_active() then ls.change_choice(1) end
+end)
