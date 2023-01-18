@@ -31,6 +31,9 @@ return require('packer').startup(function(use)
     use('mg979/vim-visual-multi')
     use('mhartington/formatter.nvim')
 
+    use('mfussenegger/nvim-dap')
+    use('rcarriga/nvim-dap-ui')
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         requires = {

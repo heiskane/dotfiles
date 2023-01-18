@@ -30,3 +30,15 @@ vim.opt.listchars:append "eol:↴"
 
 vim.keymap.set("n", "<C-j>", "jzz")
 vim.keymap.set("n", "<C-k>", "kzz")
+
+-- Debugging
+vim.keymap.set("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>")
+vim.keymap.set("n", "<F1>", "<cmd>lua require'dap'.step_into()<CR>")
+vim.keymap.set("n", "<F2>", "<cmd>lua require'dap'.step_over()<CR>",
+               {noremap = true})
+vim.keymap.set("n", "<F3>", "<cmd>lua require'dap'.step_out()<CR>")
+
+vim.keymap
+    .set("n", "<leader>b", "<cmd>lua require'dap'.toggle_breakpoint()<CR>")
+vim.keymap.set("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<CR>")
+vim.keymap.set("n", "<leader>ui", "<cmd>lua require('dapui').toggle()<CR>")

@@ -27,7 +27,6 @@ ls.add_snippets("rust", {
 /// $3
 /// # Examples
 /// TODO: at least one code example that users can copy/paste to try it
-/// even more advanced explanations if necessary
 /// $4
 /// ```rust
 /// println!("Hello World!");$5
