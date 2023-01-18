@@ -13,6 +13,10 @@ require("formatter").setup {
                     {exe = "rustfmt", stdin = true, args = {"--edition 2021"}}
             end
         },
+        python = {
+            require("formatter.filetypes.python").isort,
+            require("formatter.filetypes.python").black
+        },
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ["*"] = {
