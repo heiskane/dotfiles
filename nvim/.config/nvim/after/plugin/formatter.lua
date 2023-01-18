@@ -7,6 +7,12 @@ require("formatter").setup {
             -- "lua" filetype
             require("formatter.filetypes.lua").luaformat
         },
+        rust = {
+            function()
+                return
+                    {exe = "rustfmt", stdin = true, args = {"--edition 2021"}}
+            end
+        },
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ["*"] = {
