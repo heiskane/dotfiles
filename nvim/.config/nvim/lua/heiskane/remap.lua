@@ -34,8 +34,7 @@ vim.keymap.set("n", "<C-k>", "kzz")
 -- Debugging
 vim.keymap.set("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>")
 vim.keymap.set("n", "<F1>", "<cmd>lua require'dap'.step_into()<CR>")
-vim.keymap.set("n", "<F2>", "<cmd>lua require'dap'.step_over()<CR>",
-               {noremap = true})
+vim.keymap.set("n", "<F2>", "<cmd>lua require'dap'.step_over()<CR>")
 vim.keymap.set("n", "<F3>", "<cmd>lua require'dap'.step_out()<CR>")
 
 vim.keymap
