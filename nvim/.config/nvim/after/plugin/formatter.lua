@@ -17,6 +17,15 @@ require("formatter").setup {
             require("formatter.filetypes.python").isort,
             require("formatter.filetypes.python").black
         },
+        java = {
+            function()
+                return {
+                    exe = "clang-format",
+                    args = {"--style=LLVM", "--assume-filename=.java"},
+                    stdin = true
+                }
+            end
+        },
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ["*"] = {
