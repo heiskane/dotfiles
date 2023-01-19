@@ -35,6 +35,11 @@ return require('packer').startup(function(use)
     use('rcarriga/nvim-dap-ui')
 
     use {
+        'nvim-lualine/lualine.nvim',
+        requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    }
+
+    use {
         'VonHeikemen/lsp-zero.nvim',
         requires = {
             -- LSP Support
