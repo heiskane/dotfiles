@@ -26,6 +26,8 @@ require("formatter").setup {
                 }
             end
         },
+        typescriptreact = {require("formatter.filetypes.typescript").prettier},
+        javascript = {require("formatter.filetypes.javascript").prettier},
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ["*"] = {
