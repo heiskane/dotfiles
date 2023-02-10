@@ -20,3 +20,10 @@ require'nvim-treesitter.configs'.setup {
         additional_vim_regex_highlighting = false
     }
 }
+
+require'nvim-treesitter'.define_modules {
+    treesitter_context = {
+        attach = function(_, _) vim.cmd("TSContextEnable") end,
+        detach = function(_, _) vim.cmd("TSContextDisable") end
+    }
+}
