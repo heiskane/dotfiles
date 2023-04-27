@@ -13,7 +13,7 @@ ls.config.set_config {
 
 local s = ls.s
 local t = ls.t
-local i = ls.i
+-- local i = ls.i
 ls.add_snippets("all", {s("expand", t "Hello World")})
 
 ls.add_snippets("rust", {

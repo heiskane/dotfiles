@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
     use('nvim-treesitter/nvim-treesitter-context')
+
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use {
@@ -34,11 +35,18 @@ return require('packer').startup(function(use)
 
     use('mfussenegger/nvim-dap')
     use('rcarriga/nvim-dap-ui')
+    use('mfussenegger/nvim-dap-python')
+
+    use('lvimuser/lsp-inlayhints.nvim')
+
+    use('github/copilot.vim')
 
     use {
         'nvim-lualine/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
+
+    use('christoomey/vim-tmux-navigator')
 
     use({
         "iamcco/markdown-preview.nvim",

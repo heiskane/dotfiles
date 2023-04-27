@@ -4,7 +4,7 @@ lsp.preset('recommended')
 
 lsp.set_preferences({set_lsp_keymaps = {omit = {'<F2>'}}})
 
-lsp.ensure_installed({'eslint', 'rust_analyzer', 'pyright', 'sumneko_lua'})
+lsp.ensure_installed({'eslint', 'rust_analyzer', 'pyright'})
 
 lsp.on_attach(function(_, bufnr)
     local opts = {buffer = bufnr, remap = false}

@@ -135,6 +135,8 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias fix-monitors='nvidia-settings --assign CurrentMetaMode="DPY-1: nvidia-auto-select +0+0 {ForceCompositionPipeline=On}, DPY-0: nvidia-auto-select +3440+0 {ForceCompositionPipeline=On}"'
 
+# better cal
+alias cal='ncal -w -y -b -M'
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
