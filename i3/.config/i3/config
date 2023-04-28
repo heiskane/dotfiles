@@ -80,7 +80,7 @@ bindsym $mod+Shift+Right move right
 
 # swap workspaces
 bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace previous
+bindsym $mod+Shift+Tab workspace prev
 
 # execute i3wsr 
 # exec_always --no-startup-id $HOME/.cargo/bin/i3wsr
@@ -213,4 +213,3 @@ exec_always --no-startup-id bash -c "sleep 1 && autorandr --change --default def
 exec chromium youtube.com
 
 exec --no-startup-id udiskie
-
