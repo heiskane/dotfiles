@@ -24,6 +24,8 @@ return require('packer').startup(function(use)
         config = function() require('Comment').setup() end
     }
 
+    use('https://codeberg.org/esensar/nvim-dev-container')
+
     use {
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
