@@ -1,5 +1,14 @@
 local dap = require('dap')
 local dapui = require('dapui')
+-- require('dap-python').setup('debugpy-adapter')
+require('dap-python').setup('/usr/bin/python')
+
+dap.adapters.lldb = {
+    type = 'executable',
+    command = 'python',
+    args = {'-m', 'debugpy.adapter'}
+}
+
 dap.adapters.lldb = {
     type = 'executable',
     command = '/usr/bin/lldb-vscode', -- adjust as needed, must be absolute path
