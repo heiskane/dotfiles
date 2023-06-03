@@ -41,3 +41,17 @@ vim.keymap
     .set("n", "<leader>b", "<cmd>lua require'dap'.toggle_breakpoint()<CR>")
 vim.keymap.set("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<CR>")
 vim.keymap.set("n", "<leader>ui", "<cmd>lua require('dapui').toggle()<CR>")
+
+-- not sure if i am ever going to use these
+-- but dont think these are used by anything else
+-- Go to tab by number
+vim.keymap.set("n", "<leader>1", "1gt")
+vim.keymap.set("n", "<leader>2", "2gt")
+vim.keymap.set("n", "<leader>3", "3gt")
+vim.keymap.set("n", "<leader>4", "4gt")
+vim.keymap.set("n", "<leader>5", "5gt")
+vim.keymap.set("n", "<leader>6", "6gt")
+vim.keymap.set("n", "<leader>7", "7gt")
+vim.keymap.set("n", "<leader>8", "8gt")
+vim.keymap.set("n", "<leader>9", "9gt")
+vim.keymap.set("n", "<leader>0", ":tablast<cr>")
