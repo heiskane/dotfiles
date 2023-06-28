@@ -4,7 +4,7 @@
 )
 
 (defsrc
-  config mail calc file
+  esc config mail calc file
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
@@ -13,7 +13,7 @@
 )
 
 (deflayer base
-  @nrm @gml calc file
+  @ll  @nrm @gml calc file
   grv  1         2         3         4         5 6 7         8         9         0         -    =    bspc
   tab  q         w         e         r         t y u         i         o         p         [    ]    \
   caps @mod_lsft @mod_lalt @mod_lctl @mod_lmet g h @mod_rmet @mod_rctl @mod_ralt @mod_rsft '    ret
@@ -21,8 +21,17 @@
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
+(deflayer layer-layer
+  esc  @nrm @gml calc file
+  _    @nrm @gml _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _              _              _    _    _
+)
+
 (deflayer gaming
-  @nrm @gml calc file
+  @ll  @nrm @gml calc file
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
@@ -43,4 +52,5 @@
 
   nrm (layer-switch base)
   gml (layer-switch gaming)
+  ll  (tap-hold 200 200 esc (layer-toggle layer-layer))
 )
