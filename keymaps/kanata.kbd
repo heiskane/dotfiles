@@ -18,16 +18,25 @@
   tab  q         w         e         r         t y u         i         o         p         [    ]    \
   caps @mod_lsft @mod_lalt @mod_lctl @mod_lmet g h @mod_rmet @mod_rctl @mod_ralt @mod_rsft '    ret
   lsft z         x         c         v         b n m         ,         .         /         rsft
-  lctl lmet lalt           spc            ralt rmet rctl
+  lctl lmet lalt           @nav                              ralt      rmet      rctl
 )
 
 (deflayer layer-layer
-  esc  @nrm @gml calc file
+  esc  @nrm @gml _    _
   _    @nrm @gml _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _              _              _    _    _
+)
+
+(deflayer navigation
+  esc  _    _    _    _
+  _    _    _    _    _    _    _    _      _    _      _    _    _    _
+  _    _    _    _    _    _    _    ins    pgup del    _    _    _    _
+  _    _    _    _    _    _    lft  down   up   rght   _    _    _
+  _    _    _    _    _    _    _    home   pgdn end    _    _
+  _    _    _              _                _    _      _
 )
 
 (deflayer gaming
@@ -53,4 +62,5 @@
   nrm (layer-switch base)
   gml (layer-switch gaming)
   ll  (tap-hold 200 200 esc (layer-toggle layer-layer))
+  nav (tap-hold 200 200 spc (layer-toggle navigation))
 )
