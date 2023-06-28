@@ -17,7 +17,7 @@
   grv  1         2         3         4         5 6 7         8         9         0         -    =    bspc
   tab  q         w         e         r         t y u         i         o         p         [    ]    \
   caps @mod_lsft @mod_lalt @mod_lctl @mod_lmet g h @mod_rmet @mod_rctl @mod_ralt @mod_rsft '    ret
-  lsft z         x         c         v         b n m         ,         .         /         rsft
+  lsft z         x         c         v         b n @num      ,         .         /         rsft
   lctl lmet lalt           @nav                              ralt      rmet      rctl
 )
 
@@ -37,6 +37,15 @@
   _    _    _    _    _    _    lft  down   up   rght   _    _    _
   _    _    _    _    _    _    _    home   pgdn end    _    _
   _    _    _              _                _    _      _
+)
+
+(deflayer numbers
+  esc  _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    7    8    9    +    _    _    _    _    _    _    _    _
+  _    _    4    5    6    '    _    _    _    _    _    _    _
+  _    _    1    2    3    =    _    _    _    _    _    _
+  _    _    _              0              _    _    _
 )
 
 (deflayer gaming
@@ -63,4 +72,5 @@
   gml (layer-switch gaming)
   ll  (tap-hold 200 200 esc (layer-toggle layer-layer))
   nav (tap-hold 200 200 spc (layer-toggle navigation))
+  num (tap-hold 200 200 m   (layer-toggle numbers))
 )
