@@ -1,4 +1,10 @@
+(deflocalkeys-linux
+  config 171
+  file   144
+)
+
 (defsrc
+  config mail calc file
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
@@ -6,11 +12,21 @@
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
-(deflayer qwerty
+(deflayer base
+  @nrm @gml calc file
   grv  1         2         3         4         5 6 7         8         9         0         -    =    bspc
   tab  q         w         e         r         t y u         i         o         p         [    ]    \
   caps @mod_lsft @mod_lalt @mod_lctl @mod_lmet g h @mod_rmet @mod_rctl @mod_ralt @mod_rsft '    ret
   lsft z         x         c         v         b n m         ,         .         /         rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer gaming
+  @nrm @gml calc file
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
@@ -24,4 +40,7 @@
   mod_rctl (tap-hold         200 200 k rctl)
   mod_ralt (tap-hold         200 200 l ralt)
   mod_rsft (tap-hold         200 200 ; rsft)
+
+  nrm (layer-switch base)
+  gml (layer-switch gaming)
 )
