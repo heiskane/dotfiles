@@ -1,6 +1,23 @@
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+local ensure_packer = function()
+    local fn = vim.fn
+    local install_path = fn.stdpath('data') ..
+                             '/site/pack/packer/start/packer.nvim'
+    if fn.empty(fn.glob(install_path)) > 0 then
+        fn.system({
+            'git', 'clone', '--depth', '1',
+            'https://github.com/wbthomason/packer.nvim', install_path
+        })
+        vim.cmd [[packadd packer.nvim]]
+        return true
+    end
+    return false
+end
 
+local packer_bootstrap = ensure_packer()
+
+-- TODO: add packer to imports
+-- TODO: bootstrap
+-- https://github.com/wbthomason/packer.nvim#bootstrapping
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
@@ -13,12 +30,15 @@ return require('packer').startup(function(use)
 
     use('folke/tokyonight.nvim')
 
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter',
+        {run = ':TSUpdate', opts = {ensure_installed = {"vimdoc"}}})
     use('nvim-treesitter/playground')
     use('nvim-treesitter/nvim-treesitter-context')
 
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
+
+    -- TODO: setup elsewhere
     use {
         'numToStr/Comment.nvim',
         config = function() require('Comment').setup() end
@@ -50,6 +70,8 @@ return require('packer').startup(function(use)
 
     use('christoomey/vim-tmux-navigator')
 
+    use('ryanoasis/vim-devicons')
+
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end
@@ -68,4 +90,8 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'}
         }
     }
+
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if packer_bootstrap then require('packer').sync() end
 end)
