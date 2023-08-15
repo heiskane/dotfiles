@@ -51,7 +51,7 @@ bindsym $mod+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id "rofi -modi combi -show combi -combi-modi \\"run,drun\\""
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
@@ -82,7 +82,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
-# execute i3wsr 
+# execute i3wsr
 # exec_always --no-startup-id $HOME/.cargo/bin/i3wsr
 
 # Handle screenshots
