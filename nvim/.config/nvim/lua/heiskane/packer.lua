@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
     }
 
     use('folke/tokyonight.nvim')
+    use {"catppuccin/nvim", as = "catppuccin"}
 
     use('nvim-treesitter/nvim-treesitter',
         {run = ':TSUpdate', opts = {ensure_installed = {"vimdoc"}}})
@@ -61,8 +62,6 @@ return require('packer').startup(function(use)
 
     use('lvimuser/lsp-inlayhints.nvim')
 
-    use('github/copilot.vim')
-
     use {
         'nvim-lualine/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
@@ -76,6 +75,8 @@ return require('packer').startup(function(use)
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end
     })
+
+    use('rhysd/git-messenger.vim')
 
     use {
         'VonHeikemen/lsp-zero.nvim',

@@ -1,11 +1,8 @@
-require("tokyonight").setup({
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    style = "night"
-})
+require("tokyonight").setup({style = "night"})
+require("catppuccin").setup({flavour = "mocha"})
 
 function ColorMyStuff(color)
-    color = color or "tokyonight"
+    color = color or "catppuccin"
     vim.cmd.colorscheme(color)
 end
 
