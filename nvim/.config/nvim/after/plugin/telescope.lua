@@ -4,3 +4,5 @@ vim.keymap.set('n', 'ff', builtin.find_files, {})
 -- 	builtin.grep_string({ search = vim.fn.input("grep: ") });
 -- end)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set("n", '<leader>fr', builtin.lsp_references,
+               {noremap = true, silent = true})
