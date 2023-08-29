@@ -61,3 +61,7 @@ vim.keymap.set("n", "<leader>0", ":tablast<cr>")
 
 -- todo comments
 vim.keymap.set("n", "<leader>to", "<cmd>TodoTelescope keywords=TODO,FIX<CR>")
+
+-- AutoFormat manually to avoid unnessesary changes in
+-- manually formatted repos
+vim.keymap.set("n", "<leader>fo", "<cmd>Format<CR>")
