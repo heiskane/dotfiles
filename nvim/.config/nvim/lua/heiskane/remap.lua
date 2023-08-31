@@ -31,8 +31,8 @@ vim.opt.listchars:append "tab:<->"
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 
-vim.keymap.set("n", "<C-J>", "j<C-e>")
-vim.keymap.set("n", "<C-K>", "k<C-y>")
+vim.keymap.set("n", "<C-A-j>", "j<C-e>")
+vim.keymap.set("n", "<C-A-k>", "k<C-y>")
 
 -- Debugging
 vim.keymap.set("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>")
