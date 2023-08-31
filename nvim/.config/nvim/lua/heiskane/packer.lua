@@ -28,6 +28,11 @@ return require('packer').startup(function(use)
         requires = {{'nvim-lua/plenary.nvim'}}
     }
 
+    use {'nvim-telescope/telescope-ui-select.nvim' }
+    use {'stevearc/dressing.nvim'}
+
+    use { 'kosayoda/nvim-lightbulb' }
+
     use('folke/tokyonight.nvim')
     use {"catppuccin/nvim", as = "catppuccin"}
 
@@ -38,6 +43,8 @@ return require('packer').startup(function(use)
 
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
+
+    use('github/copilot.vim')
 
     -- TODO: setup elsewhere
     use {

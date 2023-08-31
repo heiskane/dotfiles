@@ -18,10 +18,7 @@ lsp.on_attach(function(_, bufnr)
     vim.keymap.set("n", 'dn', vim.diagnostic.goto_next)
     vim.keymap.set("n", 'dp', vim.diagnostic.goto_prev)
 
-    vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
-    vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, opts)
-    vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references, opts)
-    vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
+    vim.keymap.set("n", "<leader>ga", vim.lsp.buf.code_action, opts)
 end)
 
 lsp.nvim_workspace()
