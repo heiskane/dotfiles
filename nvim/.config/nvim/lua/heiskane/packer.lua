@@ -1,3 +1,4 @@
+-- https://github.com/wbthomason/packer.nvim#bootstrapping
 local ensure_packer = function()
     local fn = vim.fn
     local install_path = fn.stdpath('data') ..
@@ -15,11 +16,7 @@ end
 
 local packer_bootstrap = ensure_packer()
 
--- TODO: add packer to imports
--- TODO: bootstrap
--- https://github.com/wbthomason/packer.nvim#bootstrapping
 return require('packer').startup(function(use)
-    -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
     use {
