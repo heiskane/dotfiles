@@ -42,6 +42,9 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter-context')
 
     use('theprimeagen/harpoon')
+    use('tpope/vim-surround')
+    use('tpope/vim-fugitive')
+
     use('mbbill/undotree')
 
     use('github/copilot.vim')
@@ -96,6 +99,11 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'}
         }
     }
+
+    use('folke/zen-mode.nvim')
+    use('folke/twilight.nvim')
+
+    use('airblade/vim-gitgutter')
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
