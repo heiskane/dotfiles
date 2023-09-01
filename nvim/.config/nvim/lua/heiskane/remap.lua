@@ -65,3 +65,7 @@ vim.keymap.set("n", "<leader>to", "<cmd>TodoTelescope keywords=TODO,FIX<CR>")
 -- AutoFormat manually to avoid unnessesary changes in
 -- manually formatted repos
 vim.keymap.set("n", "<leader>fo", "<cmd>Format<CR>")
+
+
+-- Git stuff
+vim.keymap.set("n", "<leader>gi", "<cmd>vertical Git<CR>")
