@@ -25,10 +25,10 @@ return require('packer').startup(function(use)
         requires = {{'nvim-lua/plenary.nvim'}}
     }
 
-    use {'nvim-telescope/telescope-ui-select.nvim' }
+    use {'nvim-telescope/telescope-ui-select.nvim'}
     use {'stevearc/dressing.nvim'}
 
-    use { 'kosayoda/nvim-lightbulb' }
+    use {'kosayoda/nvim-lightbulb'}
 
     use('folke/tokyonight.nvim')
     use {"catppuccin/nvim", as = "catppuccin"}
@@ -46,11 +46,7 @@ return require('packer').startup(function(use)
 
     use('github/copilot.vim')
 
-    -- TODO: setup elsewhere
-    use {
-        'numToStr/Comment.nvim',
-        config = function() require('Comment').setup() end
-    }
+    use {'numToStr/Comment.nvim'}
 
     use('https://codeberg.org/esensar/nvim-dev-container')
 
