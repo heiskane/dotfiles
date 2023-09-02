@@ -70,3 +70,14 @@ vim.keymap.set("n", "<leader>fo", "<cmd>Format<CR>")
 -- Git stuff
 vim.keymap.set("n", "<leader>gi", "<cmd>vertical Git<CR>")
 vim.keymap.set("n", "<leader>gl", "<cmd>vertical Git log<CR>")
+
+
+-- Surround visual selection
+vim.keymap.set("v", '"', 'c""<Esc>hp')
+vim.keymap.set("v", "'", "c''<Esc>hp")
+vim.keymap.set("v", '(', 'c()<Esc>hp')
+vim.keymap.set("v", ')', 'c()<Esc>hp')
+vim.keymap.set("v", '[', 'c[]<Esc>hp')
+vim.keymap.set("v", ']', 'c[]<Esc>hp')
+vim.keymap.set("v", '{', 'c{}<Esc>hp')
+vim.keymap.set("v", '}', 'c{}<Esc>hp')
