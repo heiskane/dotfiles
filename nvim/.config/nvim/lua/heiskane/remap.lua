@@ -66,11 +66,9 @@ vim.keymap.set("n", "<leader>to", "<cmd>TodoTelescope keywords=TODO,FIX<CR>")
 -- manually formatted repos
 vim.keymap.set("n", "<leader>fo", "<cmd>Format<CR>")
 
-
 -- Git stuff
 vim.keymap.set("n", "<leader>gi", "<cmd>vertical Git<CR>")
 vim.keymap.set("n", "<leader>gl", "<cmd>vertical Git log<CR>")
-
 
 -- Surround visual selection
 vim.keymap.set("v", '"', 'c""<Esc>hp')
@@ -81,3 +79,9 @@ vim.keymap.set("v", '[', 'c[]<Esc>hp')
 vim.keymap.set("v", ']', 'c[]<Esc>hp')
 vim.keymap.set("v", '{', 'c{}<Esc>hp')
 vim.keymap.set("v", '}', 'c{}<Esc>hp')
+
+-- Ideally i would not touch the mouse but why not i guess
+vim.keymap.set("n", '<C-ScrollWheelDown>', '<cmd>resize -1<CR>')
+vim.keymap.set("n", '<C-ScrollWheelUp>', '<cmd>resize +1<CR>')
+vim.keymap.set("n", '<A-ScrollWheelDown>', '<cmd>vertical resize -1<CR>')
+vim.keymap.set("n", '<A-ScrollWheelUp>', '<cmd>vertical resize +1<CR>')
