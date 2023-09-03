@@ -41,6 +41,8 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     use('tpope/vim-surround')
     use('tpope/vim-fugitive')
+    use('tpope/vim-dadbod')
+    use('kristijanhusak/vim-dadbod-ui')
 
     use('mbbill/undotree')
 
