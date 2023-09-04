@@ -28,8 +28,9 @@ require("formatter").setup {
         },
         typescriptreact = {require("formatter.filetypes.typescript").prettier},
         javascript = {require("formatter.filetypes.javascript").prettier},
-        sql = {require("formatter.filetypes.sql").pgformat},
+        sql = {function() return {exe = "sql-formatter", stdin = true} end},
         html = {require("formatter.filetypes.html").prettier},
+        json = {require("formatter.filetypes.json").prettier},
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ["*"] = {
