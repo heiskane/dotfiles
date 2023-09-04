@@ -21,7 +21,7 @@ vim.keymap.set("n", "<leader>s",
 
 -- Scuffed when copying some special chars
 vim.keymap.set("v", "<leader>s",
-               [[y<Esc>:%s/\<<C-r>"\>/<C-r>"/gI<Left><Left><Left>]])
+               [[y<Esc>:%s/<C-r>"/<C-r>"/gI<Left><Left><Left>]])
 
 -- search selection from visual mode
 vim.keymap.set("v", "/", "y/<C-r>\"")
