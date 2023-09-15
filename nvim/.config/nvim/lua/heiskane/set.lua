@@ -4,8 +4,10 @@ vim.opt.relativenumber = true
 -- netrw relative line numbers
 vim.g.netrw_bufsettings = "noma nomod nonu nobl nowrap ro rnu"
 
--- allow copying to parent dir
-vim.g.netrw_keepdir = 0
+-- allow copying to parent dir.
+-- nevermind because this breaks other functionality
+-- like searching files
+-- vim.g.netrw_keepdir = 0
 
 -- 30% window size when split
 vim.g.netrw_winsize = 30
