@@ -69,6 +69,8 @@ vim.keymap.set("n", "<leader>fo", "<cmd>Format<CR>")
 -- Git stuff
 vim.keymap.set("n", "<leader>gi", "<cmd>vertical Git<CR>")
 vim.keymap.set("n", "<leader>gl", "<cmd>vertical Git log --pretty=format:'%h %as %an %s'<CR>")
+-- vim.keymap.set("n", "<leader>gw", "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")
+vim.keymap.set("n", "<leader>gw", "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>")
 
 -- Surround visual selection
 vim.keymap.set("v", '"', 'c""<Esc>hp')
