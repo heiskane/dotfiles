@@ -30,6 +30,19 @@ require("formatter").setup {
         javascript = {require("formatter.filetypes.javascript").prettier},
         sql = {function() return {exe = "sql-formatter", stdin = true} end},
         html = {require("formatter.filetypes.html").prettier},
+        xml = {
+            function()
+                return {
+                    exe = "tidy",
+                    args = {
+                        "-quiet", "-xml", "--indent auto", "--indent-spaces 2",
+                        "--vertical-space yes", "--tidy-mark no"
+                    },
+                    stdin = true,
+                    try_node_exe = true
+                }
+            end
+        },
         json = {require("formatter.filetypes.json").prettier},
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
