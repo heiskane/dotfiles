@@ -16,12 +16,20 @@
           {"action":"tap", "keycodes": ["EQL"]},
           {"action": "up","keycodes": ["LSFT"]},
           {"action":"tap", "keycodes": ["SPC"]}
+      ],
+      [
+          {"action":"tap", "keycodes": ["NUM"]},
+          {"action":"tap", "keycodes": ["NUM"]}
+      ],
+      [
+          {"action":"tap", "keycodes": ["CAPS"]},
+          {"action":"tap", "keycodes": ["CAPS"]}
       ]
   ],
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [
-      "KC_ESC",
+      "KC_NO",
       "KC_Q",
       "KC_W",
       "KC_E",
@@ -285,21 +293,21 @@
       "KC_NO"
     ],
     [
-      "KC_NO",
+      "KC_ACL2",
       "KC_NO",
       "KC_NO",
       "KC_BTN3",
       "KC_NO",
       "KC_NO",
-      "KC_NO",
+      "ANY(QK_MACRO_3)",
       "KC_NO",
       "KC_WH_U",
       "KC_NO",
       "KC_NO",
       "KC_NO",
+      "KC_ACL1",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
+      "ANY(QK_MACRO_2)",
       "KC_BTN1",
       "KC_BTN2",
       "KC_NO",
@@ -309,7 +317,7 @@
       "KC_MS_R",
       "KC_NO",
       "KC_NO",
-      "KC_NO",
+      "KC_ACL0",
       "KC_NO",
       "KC_NO",
       "KC_NO",
