@@ -87,3 +87,6 @@ vim.keymap.set("n", '<C-ScrollWheelDown>', '<cmd>resize -1<CR>')
 vim.keymap.set("n", '<C-ScrollWheelUp>', '<cmd>resize +1<CR>')
 vim.keymap.set("n", '<A-ScrollWheelDown>', '<cmd>vertical resize -1<CR>')
 vim.keymap.set("n", '<A-ScrollWheelUp>', '<cmd>vertical resize +1<CR>')
+
+-- toggle hlsearch
+vim.keymap.set("n", "<leader>hl", "<cmd>set invhlsearch<CR>")
