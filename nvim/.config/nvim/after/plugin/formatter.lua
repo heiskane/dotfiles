@@ -5,7 +5,7 @@ require("formatter").setup {
         lua = {
             -- "formatter.filetypes.lua" defines default configurations for the
             -- "lua" filetype
-            require("formatter.filetypes.lua").luaformat
+            require("formatter.filetypes.lua").stylua
         },
         rust = {
             function()
@@ -30,6 +30,7 @@ require("formatter").setup {
         javascript = {require("formatter.filetypes.javascript").prettier},
         sql = {function() return {exe = "sql-formatter", stdin = true} end},
         html = {require("formatter.filetypes.html").prettier},
+        -- TODO: use recently added default for xml
         xml = {
             function()
                 return {

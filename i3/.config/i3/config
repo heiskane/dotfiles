@@ -169,7 +169,7 @@ mode "resize" {
 # Pressing right will grow the window’s width.
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
-	bindsym l resize shrink width 10 px or 10 ppt
+	    bindsym l resize shrink width 10 px or 10 ppt
 		bindsym k resize grow height 10 px or 10 ppt
 		bindsym j resize shrink height 10 px or 10 ppt
 		bindsym h resize grow width 10 px or 10 ppt
@@ -191,7 +191,7 @@ bindsym $mod+r mode "resize"
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec_always --no-startup-id feh --bg-max ~/Pictures/wallpaper.jpg
+exec_always --no-startup-id feh --bg-max ~/Pictures/wallpaper.jpg ~/Pictures/wallpaper2.jpg
 
 for_window [class=".*"] border pixel 4
 
@@ -204,7 +204,7 @@ gaps bottom -10
 # picom
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
-exec_always --no-startup-id nvidia-settings --assign CurrentMetaMode="DPY-1: nvidia-auto-select +0+0 {ForceCompositionPipeline=On}, DPY-0: nvidia-auto-select +3440+0 {ForceCompositionPipeline=On}"
+exec_always --no-startup-id fix-screen-tearing.sh
 
 # Wait for nvidia-settings to run
 exec_always --no-startup-id bash -c "sleep 1 && autorandr --change --default default"
