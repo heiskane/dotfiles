@@ -90,3 +90,7 @@ vim.keymap.set("n", '<A-ScrollWheelUp>', '<cmd>vertical resize +1<CR>')
 
 -- toggle hlsearch
 vim.keymap.set("n", "<leader>hl", "<cmd>set invhlsearch<CR>")
+
+-- tmux style window split binds
+vim.keymap.set("n", "<C-w>%", "<cmd>vnew<CR>")
+vim.keymap.set("n", '<C-w>"', "<cmd>new<CR>")

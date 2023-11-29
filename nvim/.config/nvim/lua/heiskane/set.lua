@@ -35,3 +35,7 @@ vim.opt.updatetime = 50
 
 vim.opt.autoread = true
 -- vim.opt.colorcolumn = "80"
+
+-- configure split orientation
+vim.opt.splitright = true
+vim.opt.splitbelow = true
