@@ -4,8 +4,6 @@ lsp.preset('recommended')
 
 lsp.set_preferences({set_lsp_keymaps = {omit = {'<F2>'}}})
 
-lsp.ensure_installed({'eslint', 'rust_analyzer', 'pyright'})
-
 lsp.on_attach(function(_, bufnr)
     local opts = {buffer = bufnr, remap = false}
 
@@ -21,7 +19,6 @@ lsp.on_attach(function(_, bufnr)
     vim.keymap.set("n", "<leader>ga", vim.lsp.buf.code_action, opts)
 end)
 
-lsp.nvim_workspace()
 lsp.setup()
 
 vim.diagnostic.config({
@@ -31,4 +28,12 @@ vim.diagnostic.config({
     underline = true,
     severity_sort = false,
     float = true
+})
+
+require("mason").setup({})
+require("mason-lspconfig").setup({
+	ensure_installed = { "pyright" },
+	handlers = {
+		lsp.default_setup,
+	},
 })
