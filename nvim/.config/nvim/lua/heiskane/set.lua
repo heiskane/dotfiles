@@ -39,3 +39,10 @@ vim.opt.autoread = true
 -- configure split orientation
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+-- show whitespace chars
+vim.opt.list = true
+vim.opt.listchars:append "tab:<->"
+vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append "eol:↴"
+

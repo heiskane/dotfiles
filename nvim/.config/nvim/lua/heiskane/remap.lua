@@ -26,11 +26,6 @@ vim.keymap.set("v", "<leader>s",
 -- search selection from visual mode
 vim.keymap.set("v", "/", "y/<C-r>\"")
 
-vim.opt.list = true
-vim.opt.listchars:append "tab:<->"
-vim.opt.listchars:append "space:⋅"
-vim.opt.listchars:append "eol:↴"
-
 vim.keymap.set("n", "<C-A-j>", "j<C-e>")
 vim.keymap.set("n", "<C-A-k>", "k<C-y>")
 
@@ -94,3 +89,6 @@ vim.keymap.set("n", "<leader>hl", "<cmd>set invhlsearch<CR>")
 -- tmux style window split binds
 vim.keymap.set("n", "<C-w>%", "<cmd>vnew<CR>")
 vim.keymap.set("n", '<C-w>"', "<cmd>new<CR>")
+
+-- exit insert mode in terminal mode
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
