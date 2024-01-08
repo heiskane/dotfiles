@@ -1,5 +1,7 @@
 local lsp = require('lsp-zero')
 
+require("fidget").setup()
+
 lsp.preset('recommended')
 
 lsp.set_preferences({set_lsp_keymaps = {omit = {'<F2>'}}})
