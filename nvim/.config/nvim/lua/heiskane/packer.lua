@@ -102,6 +102,8 @@ return require('packer').startup(function(use)
 
     use('airblade/vim-gitgutter')
 
+    use('lukas-reineke/indent-blankline.nvim')
+
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
