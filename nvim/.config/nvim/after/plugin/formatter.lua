@@ -26,10 +26,10 @@ require("formatter").setup {
                 }
             end
         },
-        typescriptreact = {require("formatter.filetypes.typescript").prettier},
-        javascript = {require("formatter.filetypes.javascript").prettier},
+        typescriptreact = {require("formatter.filetypes.typescript").prettierd},
+        javascript = {require("formatter.filetypes.javascript").prettierd},
         sql = {function() return {exe = "sql-formatter", stdin = true} end},
-        html = {require("formatter.filetypes.html").prettier},
+        html = {require("formatter.filetypes.html").prettierd},
         -- TODO: use recently added default for xml
         xml = {
             function()
@@ -44,10 +44,10 @@ require("formatter").setup {
                 }
             end
         },
-        json = {require("formatter.filetypes.json").prettier},
-        yaml = {require("formatter.filetypes.yaml").prettier},
+        json = {require("formatter.filetypes.json").prettierd},
+        yaml = {require("formatter.filetypes.yaml").prettierd},
         cpp = {require("formatter.filetypes.cpp").clangformat},
-        css = {require("formatter.filetypes.css").prettier},
+        css = {require("formatter.filetypes.css").prettierd},
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ["*"] = {
