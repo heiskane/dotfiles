@@ -42,7 +42,8 @@ vim.opt.splitbelow = true
 
 -- show whitespace chars
 vim.opt.list = true
-vim.opt.listchars:append "tab:<->"
-vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append "tab:──→"
+vim.opt.listchars:append "trail:\\uff65"
+vim.opt.listchars:append "leadmultispace:\\uff65\\uff65\\uff65\\u2e3e"
 vim.opt.listchars:append "eol:↴"
-
+vim.opt.listchars:append "nbsp:%"

@@ -1,7 +1,7 @@
 local lsp = require('lsp-zero')
 
 require("fidget").setup()
-require("ibl").setup()
+-- require("ibl").setup()
 
 lsp.preset('recommended')
 
