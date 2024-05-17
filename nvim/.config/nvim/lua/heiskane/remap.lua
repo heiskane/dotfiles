@@ -76,6 +76,7 @@ vim.keymap.set("v", '[', 'c[]<Esc>hp')
 vim.keymap.set("v", ']', 'c[]<Esc>hp')
 vim.keymap.set("v", '{', 'c{}<Esc>hp')
 vim.keymap.set("v", '}', 'c{}<Esc>hp')
+vim.keymap.set("v", '`', 'c``<Esc>hp')
 
 -- Ideally i would not touch the mouse but why not i guess
 vim.keymap.set("n", '<C-ScrollWheelDown>', '<cmd>resize -1<CR>')
