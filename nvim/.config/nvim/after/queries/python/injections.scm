@@ -35,3 +35,11 @@
       (string 
         (string_content) @sql))
 ))))
+
+; yaml content in python string
+(expression_statement
+  (assignment
+    left: (identifier) @_ident (#match? @_ident ".*__YAML__$")
+    right: (string (string_content) @yaml)
+  )
+)
