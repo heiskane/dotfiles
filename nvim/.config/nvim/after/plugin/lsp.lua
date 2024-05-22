@@ -37,10 +37,32 @@ require("mason").setup({})
 require("mason-lspconfig").setup({
 	ensure_installed = { "pyright", "markdown_oxide" },
 	handlers = {
-		lsp.default_setup,
+		function(server_name)
+			lspconfig[server_name].setup({})
+		end,
 		html = function()
 			lspconfig.html.setup({})
 			lspconfig.htmx.setup({})
+		end,
+		markdown_oxide = function()
+			-- An example nvim-lspconfig capabilities setting
+			local capabilities =
+				require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+			-- Ensure that dynamicRegistration is enabled! This allows the LS to take into account actions like the
+			-- Create Unresolved File code action, resolving completions for unindexed code blocks, ...
+			capabilities.workspace = {
+				didChangeWatchedFiles = {
+					dynamicRegistration = true,
+				},
+			}
+
+			lspconfig.markdown_oxide.setup({
+				capabilities = capabilities, -- again, ensure that capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
+				on_attach = function()
+					-- TODO: add markdown keybinds?
+				end, -- configure your on attach config
+			})
 		end,
 	},
 })
