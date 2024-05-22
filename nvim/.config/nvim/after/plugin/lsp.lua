@@ -23,7 +23,7 @@ lsp.on_attach(function(_, bufnr)
 	vim.keymap.set("n", "dp", vim.diagnostic.goto_prev)
 
 	vim.keymap.set("n", "<leader>ga", vim.lsp.buf.code_action, opts)
-	vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { noremap = true, silent = true })
+	vim.keymap.set("n", "<leader>fr", require("telescope.builtin").lsp_references, { noremap = true, silent = true })
 end)
 
 lsp.setup()
