@@ -16,7 +16,7 @@ vim.g.Netrw_UserMaps = { { "<C-l>", "<C-U>TmuxNavigateRight<cr>" } }
 vim.g.netrw_winsize = 30
 
 -- allow copying directories
-vim.g.netrw_localcopydircmd = 'cp -r'
+vim.g.netrw_localcopydircmd = "cp -r"
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -45,8 +45,9 @@ vim.opt.splitbelow = true
 
 -- show whitespace chars
 vim.opt.list = true
-vim.opt.listchars:append "tab:──→"
-vim.opt.listchars:append "trail:\\uff65"
-vim.opt.listchars:append "leadmultispace:\\uff65\\uff65\\uff65\\u2e3e"
-vim.opt.listchars:append "eol:↴"
-vim.opt.listchars:append "nbsp:%"
+vim.opt.listchars:append("tab:──→")
+vim.opt.listchars:append("trail:\\uff65")
+vim.opt.listchars:append("space:\\uff65")
+vim.opt.listchars:append("leadmultispace:\\uff65\\uff65\\uff65\\u2e3e")
+vim.opt.listchars:append("eol:↴")
+vim.opt.listchars:append("nbsp:%")
