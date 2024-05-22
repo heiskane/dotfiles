@@ -4,7 +4,7 @@ vim.opt.relativenumber = true
 -- netrw relative line numbers
 vim.g.netrw_bufsettings = "noma nomod nonu nobl nowrap ro rnu"
 
--- override default netrw keymap to allow navigating to right pane form netrw
+-- override default netrw keymap to allow navigating to right pane from netrw
 vim.g.Netrw_UserMaps = { { "<C-l>", "<C-U>TmuxNavigateRight<cr>" } }
 
 -- allow copying to parent dir.
