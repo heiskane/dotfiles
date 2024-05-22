@@ -36,13 +36,10 @@ return require("packer").startup(function(use)
 	use("folke/tokyonight.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 
-	use(
-		"nvim-treesitter/nvim-treesitter",
-		{
-			run = ":TSUpdate",
-			opts = { ensure_installed = { "vimdoc", "python", "markdown", "markdown_inline", "bash" } },
-		}
-	)
+	use("nvim-treesitter/nvim-treesitter", {
+		run = ":TSUpdate",
+		opts = { ensure_installed = { "vimdoc", "python", "markdown", "markdown_inline", "bash" } },
+	})
 	use("nvim-treesitter/playground")
 	use("nvim-treesitter/nvim-treesitter-context")
 
