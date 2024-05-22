@@ -58,6 +58,7 @@ return require('packer').startup(function(use)
     use('mg979/vim-visual-multi')
     use('mhartington/formatter.nvim')
 
+    use('nvim-neotest/nvim-nio')
     use('mfussenegger/nvim-dap')
     use('rcarriga/nvim-dap-ui')
     use('mfussenegger/nvim-dap-python')
