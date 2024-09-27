@@ -2,6 +2,8 @@
 local ls = require("luasnip")
 local types = require("luasnip.util.types")
 
+require("luasnip.loaders.from_vscode").lazy_load()
+
 ls.config.set_config {
     history = true,
     updateevents = "TextChanged,TextChangedI",
@@ -10,29 +12,6 @@ ls.config.set_config {
         [types.choiceNode] = {active = {virt_text = {{"<-", "Error?"}}}}
     }
 }
-
-local s = ls.s
-local t = ls.t
--- local i = ls.i
-ls.add_snippets("all", {s("expand", t "Hello World")})
-
-ls.add_snippets("rust", {
-    ls.parser.parse_snippet("docstring", [[
-/// TODO: short sentence explaining what it is
-/// $1
-/// TODO: more detailed explanation
-/// $2
-/// # Panics
-/// TODO: Explain panics if relevant
-/// $3
-/// # Examples
-/// TODO: at least one code example that users can copy/paste to try it
-/// $4
-/// ```rust
-/// println!("Hello World!");$5
-/// ```
-    ]])
-})
 
 -- <c-k> is my expansion key
 -- this will expand the current item or jump to the next item within the snippet.
