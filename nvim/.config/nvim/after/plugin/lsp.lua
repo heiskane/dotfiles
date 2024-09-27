@@ -1,22 +1,6 @@
 local lsp = require("lsp-zero")
 local lspconfig = require("lspconfig")
 
-local cmp = require("cmp")
-local cmp_format = require("lsp-zero").cmp_format({ details = true })
-
-cmp.setup({
-	sources = {
-		{ name = "nvim_lsp" },
-		{ name = "luasnip" },
-	},
-	snippet = {
-		expand = function(args)
-			require("luasnip").lsp_expand(args.body)
-		end,
-	},
-	formatting = cmp_format,
-})
-
 require("fidget").setup()
 
 lsp.preset("recommended")
