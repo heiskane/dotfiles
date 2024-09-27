@@ -51,3 +51,5 @@ vim.opt.listchars:append("space:\\uff65")
 vim.opt.listchars:append("leadmultispace:\\uff65\\uff65\\uff65\\u2e3e")
 vim.opt.listchars:append("eol:↴")
 vim.opt.listchars:append("nbsp:%")
+
+vim.g.have_nerd_font = true
