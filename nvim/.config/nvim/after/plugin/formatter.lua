@@ -27,6 +27,7 @@ require("formatter").setup {
             end
         },
         typescriptreact = {require("formatter.filetypes.typescript").prettierd},
+        typescript = {require("formatter.filetypes.typescript").prettierd},
         javascript = {require("formatter.filetypes.javascript").prettierd},
         sql = {function() return {exe = "sql-formatter", stdin = true} end},
         html = {require("formatter.filetypes.html").prettierd},
