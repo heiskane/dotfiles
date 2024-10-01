@@ -91,5 +91,9 @@ vim.keymap.set("n", "<leader>hl", "<cmd>set invhlsearch<CR>")
 vim.keymap.set("n", "<C-w>%", "<cmd>vnew<CR>")
 vim.keymap.set("n", '<C-w>"', "<cmd>new<CR>")
 
+-- tmux style pane zoom
+vim.keymap.set("n", '<C-w>z', "<C-w>_<C-w>|")
+vim.keymap.set("n", '<C-w>Z', "<C-w>=")
+
 -- exit insert mode in terminal mode
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
