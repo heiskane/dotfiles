@@ -53,3 +53,6 @@ vim.opt.listchars:append("eol:↴")
 vim.opt.listchars:append("nbsp:%")
 
 vim.g.have_nerd_font = true
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
