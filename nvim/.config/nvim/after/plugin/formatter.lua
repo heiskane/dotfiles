@@ -49,6 +49,7 @@ require("formatter").setup {
         yaml = {require("formatter.filetypes.yaml").prettierd},
         cpp = {require("formatter.filetypes.cpp").clangformat},
         css = {require("formatter.filetypes.css").prettierd},
+        c = {require("formatter.filetypes.c").clangformat},
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ["*"] = {
