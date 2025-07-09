@@ -124,6 +124,16 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+    use({ "echasnovski/mini.nvim" })
+    use({ "nvim-tree/nvim-web-devicons" })
+
+	use({
+		"stevearc/oil.nvim",
+		config = function()
+			require("oil").setup()
+		end,
+	})
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
