@@ -13,8 +13,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-    callback = function(e)
-        local opts = { buffer = e.buf, remap = false }
+
+    callback = function(args)
+        local opts = { buffer = args.buf, remap = false }
 
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
         vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
