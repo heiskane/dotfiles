@@ -1,0 +1,5 @@
+return {
+    cmd = { "elixir-ls" },
+    filetypes = { "elixir" },
+    root_markers = { "mix.exs", "mix.lock" },
+}
