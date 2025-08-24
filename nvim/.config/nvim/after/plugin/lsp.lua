@@ -46,7 +46,7 @@ require("mason-lspconfig").setup({
 		end,
 		html = function()
 			lspconfig.html.setup({})
-			lspconfig.htmx.setup({})
+			-- lspconfig.htmx.setup({})
 		end,
 		markdown_oxide = function()
 			-- An example nvim-lspconfig capabilities setting
