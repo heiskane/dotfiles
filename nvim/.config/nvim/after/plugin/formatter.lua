@@ -18,6 +18,7 @@ require("formatter").setup {
             -- require("formatter.filetypes.python").isort,
             -- require("formatter.filetypes.python").black
         },
+        elixir = {require("formatter.filetypes.elixir").mixformat},
         java = {
             function()
                 return {
