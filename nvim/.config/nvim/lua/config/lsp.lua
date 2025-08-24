@@ -3,6 +3,7 @@ vim.lsp.enable({
     "elixirls",
     "pyright",
     "ruff",
+    "eslint",
 })
 
 vim.diagnostic.config({
