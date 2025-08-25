@@ -23,8 +23,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set("n", "<space>r", vim.lsp.buf.rename, opts)
         vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
         vim.keymap.set("n", "<leader>op", vim.diagnostic.open_float)
-        vim.keymap.set("n", "dn", vim.diagnostic.goto_next)
-        vim.keymap.set("n", "dp", vim.diagnostic.goto_prev)
+        vim.keymap.set("n", "dn", function()
+            vim.diagnostic.jump({ count = 1, float = true })
+        end)
+        vim.keymap.set("n", "dp", function()
+            vim.diagnostic.jump({ count = -1, float = true })
+        end)
 
         vim.keymap.set("n", "<leader>ga", vim.lsp.buf.code_action, opts)
         vim.keymap.set(
