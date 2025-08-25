@@ -54,3 +54,6 @@ vim.g.have_nerd_font = true
 -- better searching
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- window border
+vim.opt.winborder = "bold"
