@@ -1,13 +1,11 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
-        branch = "master",
+        branch = "main",
         lazy = false,
         build = ":TSUpdate",
-        opts_extend = { "ensure_installed" },
-        opts = {
-            highlight = { enable = true },
-            ensure_installed = {
+        config = function()
+            require("nvim-treesitter").install({
                 "python",
                 "elixir",
                 "html",
@@ -17,11 +15,19 @@ return {
                 "markdown_inline",
                 "lua",
                 "yaml",
-            },
-        },
-        ---@param opts TSConfig
-        config = function(_, opts)
-            require("nvim-treesitter.configs").setup(opts)
+            })
+            vim.api.nvim_create_autocmd("FileType", {
+                pattern = { "*" },
+                callback = function(opts)
+                    -- treesitter will fail to start if it is missing the language (eg. oil)
+                    if not pcall(vim.treesitter.start) then
+                        vim.notify(
+                            "treesitter failed to start for filetype: " .. vim.inspect(opts.match),
+                            vim.log.levels.WARN
+                        )
+                    end
+                end,
+            })
         end,
     },
     {
