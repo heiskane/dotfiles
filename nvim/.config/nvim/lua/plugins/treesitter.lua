@@ -19,12 +19,17 @@ return {
             vim.api.nvim_create_autocmd("FileType", {
                 pattern = { "*" },
                 callback = function(opts)
-                    -- treesitter will fail to start if it is missing the language (eg. oil)
-                    if not pcall(vim.treesitter.start) then
-                        vim.notify(
-                            "treesitter failed to start for filetype: " .. vim.inspect(opts.match),
-                            vim.log.levels.WARN
-                        )
+                    local exclude_ft = { "oil", "fidget", "fugitive" }
+                    if vim.tbl_contains(exclude_ft, opts.match) then
+                        return
+                    else
+                        -- treesitter will fail to start if it is missing the language (eg. oil)
+                        if not pcall(vim.treesitter.start) then
+                            vim.notify(
+                                "treesitter failed to start for filetype: " .. vim.inspect(opts.match),
+                                vim.log.levels.WARN
+                            )
+                        end
                     end
                 end,
             })
