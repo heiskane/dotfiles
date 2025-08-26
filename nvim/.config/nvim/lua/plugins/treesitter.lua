@@ -19,7 +19,7 @@ return {
             vim.api.nvim_create_autocmd("FileType", {
                 pattern = { "*" },
                 callback = function(opts)
-                    local exclude_ft = { "oil", "fidget", "fugitive" }
+                    local exclude_ft = { "oil", "fidget", "fugitive", "lazy", "lazy_backdrop" }
                     if vim.tbl_contains(exclude_ft, opts.match) then
                         return
                     else

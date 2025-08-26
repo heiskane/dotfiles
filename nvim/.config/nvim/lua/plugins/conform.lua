@@ -7,6 +7,7 @@ return {
             javascript = { "prettierd" },
             typescript = { "prettierd" },
             html = { "prettierd" },
+            sql = { "pg_format" }
         },
         formatters = {
             stylua = {
