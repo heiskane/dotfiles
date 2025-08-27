@@ -15,3 +15,7 @@ vim.diagnostic.config({
     severity_sort = false,
     float = true,
 })
+
+vim.api.nvim_create_user_command("LspInfo", function()
+    vim.cmd([[ checkhealth vim.lsp ]])
+end, { desc = "Show lsp info" })
