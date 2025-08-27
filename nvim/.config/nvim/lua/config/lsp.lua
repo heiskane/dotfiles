@@ -4,6 +4,7 @@ vim.lsp.enable({
     "pyright",
     "ruff",
     "eslint",
+    "postgresql",
 })
 
 vim.diagnostic.config({
