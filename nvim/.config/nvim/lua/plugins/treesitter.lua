@@ -4,8 +4,9 @@ return {
         branch = "main",
         lazy = false,
         build = ":TSUpdate",
-        config = function()
-            require("nvim-treesitter").install({
+        opts = {
+            install_max_wait = 300000, -- wait max. 5min to install
+            ensure_installed = {
                 "python",
                 "elixir",
                 "html",
@@ -15,18 +16,35 @@ return {
                 "markdown_inline",
                 "lua",
                 "yaml",
-            })
+            },
+            exclude_ft = {
+                "oil",
+                "fidget",
+                "fugitive",
+                "lazy",
+                "lazy_backdrop",
+            },
+            ft_lang = {
+                htmlangular = "html",
+            },
+        },
+        config = function(_, opts)
+            require("nvim-treesitter").install(opts.ensure_installed):wait(opts.install_max_wait)
+
+            for ft, lang in pairs(opts.ft_lang) do
+                vim.treesitter.language.register(lang, { ft })
+            end
+
             vim.api.nvim_create_autocmd("FileType", {
                 pattern = { "*" },
-                callback = function(opts)
-                    local exclude_ft = { "oil", "fidget", "fugitive", "lazy", "lazy_backdrop" }
-                    if vim.tbl_contains(exclude_ft, opts.match) then
+                callback = function(event)
+                    if vim.tbl_contains(opts.exclude_ft, event.match) then
                         return
                     else
                         -- treesitter will fail to start if it is missing the language (eg. oil)
                         if not pcall(vim.treesitter.start) then
                             vim.notify(
-                                "treesitter failed to start for filetype: " .. vim.inspect(opts.match),
+                                "treesitter failed to start for filetype: " .. vim.inspect(event.match),
                                 vim.log.levels.WARN
                             )
                         end
