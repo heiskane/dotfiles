@@ -9,6 +9,7 @@ return {
             html = { "prettierd" },
             htmlangular = { "prettierd" },
             sql = { "pg_format" },
+            yaml = { "yamlfmt" },
         },
         formatters = {
             stylua = {
