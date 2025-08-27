@@ -6,6 +6,7 @@ local enabled_servers = {
     "eslint",
     "postgresql",
     "angularls",
+    "tsls",
 }
 
 vim.lsp.enable(enabled_servers)
