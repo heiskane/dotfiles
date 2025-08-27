@@ -2,6 +2,7 @@ return {
     "nvim-telescope/telescope.nvim",
     branch = "master",
     lazy = true,
+    cmd = { "Telescope" },
     dependencies = {
         "nvim-lua/plenary.nvim",
         "nvim-telescope/telescope-live-grep-args.nvim",
