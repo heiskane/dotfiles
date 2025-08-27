@@ -10,6 +10,7 @@ return {
             htmlangular = { "prettierd" },
             sql = { "pg_format" },
             yaml = { "yamlfmt" },
+            json = { "jq" },
         },
         formatters = {
             stylua = {
