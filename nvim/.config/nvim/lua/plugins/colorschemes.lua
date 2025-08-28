@@ -11,4 +11,5 @@ return {
     { "catppuccin/nvim", name = "catppuccin", priority = 999 },
     { "rebelot/kanagawa.nvim", name = "kanagawa", priority = 998 },
     { "rose-pine/neovim", name = "rose-pine", priority = 997 },
+    { "shaunsingh/nord.nvim", name = "nord", priority = 996 },
 }
