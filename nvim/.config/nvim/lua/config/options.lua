@@ -57,3 +57,12 @@ vim.opt.smartcase = true
 
 -- window border
 vim.opt.winborder = "bold"
+
+-- Don't show the mode, since it's already in the status line
+vim.o.showmode = false
+
+-- Enable break indent
+vim.o.breakindent = true
+
+-- Show which line your cursor is on
+vim.o.cursorline = true
