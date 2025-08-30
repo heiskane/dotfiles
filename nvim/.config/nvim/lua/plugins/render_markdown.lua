@@ -7,6 +7,11 @@ return {
     ---@type render.md.UserConfig
     opts = {
         render_modes = true,
+        heading = {
+            sign = false,
+            width = "block",
+            right_pad = 2,
+        },
         code = { language = false },
     },
 }
