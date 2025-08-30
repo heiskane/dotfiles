@@ -23,6 +23,10 @@ return {
                 "fugitive",
                 "lazy",
                 "lazy_backdrop",
+                "blink-cmp-menu",
+                "TelescopeResults",
+                "TelescopePrompt",
+                "git",
             },
             ft_lang = {
                 htmlangular = "html",
