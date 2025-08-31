@@ -1,6 +1,7 @@
 local enabled_servers = {
     "luals",
-    "elixirls",
+    -- "elixirls",
+    "expertls",
     "pyright",
     "ruff",
     "eslint",

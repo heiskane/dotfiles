@@ -51,3 +51,4 @@ return {
         extensions = { "nvim-dap-ui", "quickfix" },
     },
 }
+-- TODO: https://www.reddit.com/r/neovim/comments/16tfcnt/how_to_add_custom_function_for_lualine/
