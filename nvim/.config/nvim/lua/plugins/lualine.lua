@@ -1,3 +1,18 @@
+function GetWordsOrLocation()
+    if vim.bo.filetype == "md" or vim.bo.filetype == "txt" or vim.bo.filetype == "markdown" then
+        if vim.fn.wordcount().visual_words == 1 then
+            return tostring(vim.fn.wordcount().visual_words) .. " word"
+        elseif not (vim.fn.wordcount().visual_words == nil) then
+            return tostring(vim.fn.wordcount().visual_words) .. " words"
+        else
+            return tostring(vim.fn.wordcount().words) .. " words"
+        end
+    else
+        local location = require("lualine.components.location")
+        return location()
+    end
+end
+
 return {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -33,9 +48,9 @@ return {
                 },
             },
             lualine_c = { { "filename", path = 1 } },
-            lualine_x = { "encoding", "filetype" },
-            lualine_y = { "progress" },
-            lualine_z = { "location" },
+            lualine_x = { "progress" },
+            lualine_y = { "filetype" },
+            lualine_z = { "GetWordsOrLocation()" },
         },
         inactive_sections = {
             lualine_a = {},
@@ -51,4 +66,3 @@ return {
         extensions = { "nvim-dap-ui", "quickfix" },
     },
 }
--- TODO: https://www.reddit.com/r/neovim/comments/16tfcnt/how_to_add_custom_function_for_lualine/
