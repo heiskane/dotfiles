@@ -19,14 +19,15 @@ return {
             },
             exclude_ft = {
                 "oil",
-                "fidget",
-                "fugitive",
+                "git",
                 "lazy",
+                "fidget",
+                "harpoon",
+                "fugitive",
                 "lazy_backdrop",
                 "blink-cmp-menu",
                 "TelescopeResults",
                 "TelescopePrompt",
-                "git",
             },
             ft_lang = {
                 htmlangular = "html",
