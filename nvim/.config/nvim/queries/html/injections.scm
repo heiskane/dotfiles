@@ -14,7 +14,7 @@
   (attribute_name) @_attr (#match? @_attr "^hx-vals")
   (quoted_attribute_value
     (attribute_value) @injection.content
-    (#match? @injection.content "^js:")
+    (#match? @injection.content "^js:.*$")
     (#offset! @injection.content 0 3 0 0)
     (#set! injection.language "javascript")))
 
