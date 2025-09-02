@@ -18,6 +18,7 @@ return {
                 "yaml",
             },
             exclude_ft = {
+                "qf",
                 "oil",
                 "git",
                 "lazy",
