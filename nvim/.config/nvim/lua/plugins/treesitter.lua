@@ -25,6 +25,7 @@ return {
                 "fidget",
                 "harpoon",
                 "fugitive",
+                "gitcommit",
                 "lazy_backdrop",
                 "blink-cmp-menu",
                 "TelescopeResults",
