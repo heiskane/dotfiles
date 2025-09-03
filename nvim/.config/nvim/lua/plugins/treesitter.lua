@@ -29,8 +29,8 @@ return {
                 "oil_preview",
                 "lazy_backdrop",
                 "blink-cmp-menu",
-                "TelescopePrompt",
                 "TelescopeResults",
+                "TelescopePrompt",
             },
             ft_lang = {
                 htmlangular = "html",
