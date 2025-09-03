@@ -6,12 +6,13 @@
 # Otherwise you can use the nuclear option:
 # killall -q polybar
 
-if type "xrandr"; then
-  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    MONITOR=$m /usr/bin/polybar --reload mainbar &
-  done
-else
-  polybar --reload mainbar &
-fi
+# if type "xrandr"; then
+#   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+#     MONITOR=$m /usr/bin/polybar --reload mainbar &
+#   done
+# else
+#   polybar --reload mainbar &
+# fi
+polybar --reload mainbar &
 
 echo "Bars launched..."
