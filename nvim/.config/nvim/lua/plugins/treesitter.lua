@@ -26,6 +26,7 @@ return {
                 "harpoon",
                 "fugitive",
                 "gitcommit",
+                "oil_preview",
                 "lazy_backdrop",
                 "blink-cmp-menu",
                 "TelescopeResults",
