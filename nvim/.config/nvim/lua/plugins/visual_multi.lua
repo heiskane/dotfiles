@@ -1,5 +1,6 @@
 return {
     "mg979/vim-visual-multi",
+    event = { "VeryLazy" },
     config = function()
         -- https://vi.stackexchange.com/a/6855
         -- Without this blink.cmp breaks after using visual-multi mode
