@@ -26,6 +26,7 @@ return {
                 "fidget",
                 "harpoon",
                 "fugitive",
+                "dashboard",
                 "gitcommit",
                 "oil_preview",
                 "lazy_backdrop",
