@@ -19,7 +19,6 @@ return {
     opts = {
         options = {
             icons_enabled = true,
-            theme = "tokyonight",
             component_separators = { left = "", right = "" },
             section_separators = { left = "", right = "" },
             disabled_filetypes = { statusline = {}, winbar = {} },
@@ -65,4 +64,14 @@ return {
         inactive_winbar = {},
         extensions = { "nvim-dap-ui", "quickfix" },
     },
+    config = function(_, opts)
+        local tokyonight = require("lualine.themes.tokyonight-night")
+        tokyonight.inactive = {
+            a = { bg = "#334155", fg = "#7aa2f7" },
+            b = { bg = "#334155", fg = "#e5e7eb", gui = "bold" },
+            c = { bg = "#334155", fg = "#e5e7eb" },
+        }
+        opts.options.theme = tokyonight
+        require("lualine").setup(opts)
+    end,
 }
