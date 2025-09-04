@@ -8,5 +8,5 @@ return {
     keys = {
         { "<leader>to", "<cmd>TodoTelescope keywords=TODO,FIX<CR>", mode = "n" },
     },
-    ft = { "*" },
+    event = { "BufEnter" },
 }
