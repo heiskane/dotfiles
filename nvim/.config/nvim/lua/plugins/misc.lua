@@ -1,11 +1,12 @@
 return {
-    { "tpope/vim-surround" },
-    { "airblade/vim-gitgutter" },
+    { "tpope/vim-surround", event = { "VeryLazy" } },
+    { "airblade/vim-gitgutter", event = { "VeryLazy" } },
     { "j-hui/fidget.nvim", opts = {} },
     { "mason-org/mason.nvim", opts = {} },
-    { "windwp/nvim-autopairs", opts = {} },
+    { "windwp/nvim-autopairs", opts = {}, event = { "VeryLazy" } },
     {
         "kosayoda/nvim-lightbulb",
+        event = { "VeryLazy" },
         opts = { autocmd = { enabled = true } },
     },
     {
