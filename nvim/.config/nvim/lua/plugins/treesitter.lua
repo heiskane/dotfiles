@@ -22,6 +22,7 @@ return {
                 "oil",
                 "git",
                 "lazy",
+                "mason",
                 "fidget",
                 "harpoon",
                 "fugitive",
