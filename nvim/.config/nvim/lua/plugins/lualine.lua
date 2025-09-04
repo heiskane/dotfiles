@@ -62,7 +62,7 @@ return {
         tabline = {},
         winbar = {},
         inactive_winbar = {},
-        extensions = { "nvim-dap-ui", "quickfix" },
+        extensions = { "oil", "fugitive", "quickfix" },
     },
     config = function(_, opts)
         local tokyonight = require("lualine.themes.tokyonight-night")
