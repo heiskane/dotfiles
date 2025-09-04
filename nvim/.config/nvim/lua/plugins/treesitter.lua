@@ -33,6 +33,7 @@ return {
                 "blink-cmp-menu",
                 "TelescopePrompt",
                 "TelescopeResults",
+                "blink-cmp-documentation",
             },
             ft_lang = {
                 htmlangular = "html",
