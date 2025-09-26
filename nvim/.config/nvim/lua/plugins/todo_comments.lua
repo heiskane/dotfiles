@@ -2,7 +2,10 @@ return {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
-        keywords = { HACK = { alt = { "KLUDGE" } } },
+        keywords = {
+            HACK = { alt = { "KLUDGE" } },
+            FIX = { alt = { "IMPORTANT" } },
+        },
         highlight = {
             pattern = {
                 [[.*(\@(KEYWORDS))\s*]], -- matches: @TODO  comment
