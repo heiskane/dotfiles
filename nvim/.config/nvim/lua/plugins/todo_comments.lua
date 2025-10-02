@@ -4,7 +4,7 @@ return {
     opts = {
         keywords = {
             HACK = { alt = { "KLUDGE" } },
-            FIX = { alt = { "IMPORTANT" } },
+            FIX = { alt = { "IMPORTANT", "FIXME" } },
         },
         highlight = {
             pattern = {
