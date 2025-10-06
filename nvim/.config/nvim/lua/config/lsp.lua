@@ -8,6 +8,7 @@ local enabled_servers = {
     "postgresql",
     "angularls",
     "tsls",
+    "cssls",
 }
 
 vim.lsp.enable(enabled_servers)
