@@ -11,6 +11,7 @@ return {
             sql = { "pg_format" },
             yaml = { "yamlfmt" },
             json = { "jq" },
+            sh = { "shfmt" },
         },
         formatters = {
             stylua = {
