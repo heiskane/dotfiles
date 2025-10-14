@@ -12,8 +12,8 @@ return {
         end, { desc = "Create a `work_in_progress` commit" })
 
         vim.api.nvim_create_user_command("Gtag", function(params)
-            vim.cmd(string.format("Git tag %s'", params.args))
-            vim.cmd(string.format("Git push origin tag %s'", params.args))
+            vim.cmd(string.format("Git tag %s", params.args))
+            vim.cmd(string.format("Git push origin tag %s", params.args))
         end, { desc = "Create git tag and push to origin", nargs = 1 })
     end,
 }
