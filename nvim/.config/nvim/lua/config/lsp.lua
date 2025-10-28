@@ -9,6 +9,7 @@ local enabled_servers = {
     "angularls",
     "tsls",
     "cssls",
+    "gleam",
 }
 
 vim.lsp.enable(enabled_servers)
