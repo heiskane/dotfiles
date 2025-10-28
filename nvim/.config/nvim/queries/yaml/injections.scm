@@ -17,3 +17,9 @@
   value: (block_node (block_scalar) @injection.content
     (#offset! @injection.content 0 1 0 0)
     (#set! injection.language "python")))
+
+(block_mapping_pair
+  key: (flow_node) @_file_name (#match? @_file_name ".*\.(yaml|yml)")
+  value: (block_node (block_scalar) @injection.content
+    (#offset! @injection.content 0 1 0 0)
+    (#set! injection.language "yaml")))
