@@ -12,6 +12,7 @@ return {
             yaml = { "yamlfmt" },
             json = { "jq" },
             sh = { "shfmt" },
+            elixir = { "mix" },
         },
         formatters = {
             stylua = {
