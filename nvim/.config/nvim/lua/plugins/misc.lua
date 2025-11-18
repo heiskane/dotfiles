@@ -26,4 +26,9 @@ return {
             { "<leader>u", vim.cmd.UndotreeToggle, mode = "n" },
         },
     },
+    {
+        "catgoose/nvim-colorizer.lua",
+        event = "BufReadPre",
+        opts = {},
+    },
 }
