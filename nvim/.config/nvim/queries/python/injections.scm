@@ -10,6 +10,16 @@
       (string_content) @injection.content
       (#set! injection.language "sql")))))
 
+(expression_statement
+  (call
+  (attribute
+    object: (identifier) @_obj (#eq? @_obj "cur")
+    attribute: (identifier) @_attr (#match? @_attr "(execute|executemany)"))
+  (argument_list
+    (string
+      (string_content) @injection.content
+      (#set! injection.language "sql")))))
+
 ; async session.execute calls with raw sql
 (expression_statement
   (await
