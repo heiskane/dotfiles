@@ -2,6 +2,7 @@ return {
     "tpope/vim-fugitive",
     cmd = { "Git", "Gwip", "Gtag" },
     keys = {
+        { "<leader>gb", "<cmd>Git blame<cr>", mode = "n" },
         { "<leader>gi", "<cmd>vertical Git<cr>", mode = "n" },
         { "<leader>gl", "<cmd>vertical Git log --pretty=format:'%h %as %an %s'<CR>", mode = "n" },
     },
