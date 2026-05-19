@@ -13,6 +13,7 @@ return {
             json = { "jq" },
             sh = { "shfmt" },
             elixir = { "mix" },
+            ocaml = { "ocamlformat" },
         },
         formatters = {
             stylua = {

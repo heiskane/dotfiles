@@ -10,6 +10,7 @@ local enabled_servers = {
     "tsls",
     "cssls",
     "gleam",
+    "ocamllsp",
 }
 
 vim.lsp.enable(enabled_servers)
