@@ -11,6 +11,8 @@ local enabled_servers = {
     "cssls",
     "gleam",
     "ocamllsp",
+    "svelte",
+    "tailwindcss",
 }
 
 vim.lsp.enable(enabled_servers)
